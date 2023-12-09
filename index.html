@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="calculator-section" id="calculator-section">
+        
+        <form class="calculator" id="calculator">
+
+            <div class="display-section" id="show-section">
+                <input type="text" class="display" id="display" name="display">
+            </div>
+
+            <div class="button-section" id="button-section">
+
+                <div class="container">
+                    <input type="button" class="button" value="7" onclick="display.value += '7' ">
+                    <input type="button" class="button" value="8" onclick="display.value += '8' ">
+                    <input type="button" class="button" value="9" onclick="display.value += '9' ">
+                    <input type="button" class="button" id="operator" value="DEL" onclick="back();">
+                </div>
+
+                <div class="container">
+                    <input type="button" class="button" value="4" onclick="display.value += '4' ">
+                    <input type="button" class="button" value="5" onclick="display.value += '5' ">
+                    <input type="button" class="button" value="6" onclick="display.value += '6' ">
+                    <input type="button" class="button" id="operator" value="+" onclick="display.value += '+' ">
+                </div>
+
+                <div class="container">
+                    <input type="button" class="button" value="1" onclick="display.value += '1' ">
+                    <input type="button" class="button" value="2" onclick="display.value += '2' ">
+                    <input type="button" class="button" value="3" onclick="display.value += '3' ">
+                    <input type="button" class="button" id="operator" value="-" onclick="display.value += '-' ">
+                </div>
+                
+                <div class="container">
+                    <input type="button" class="button" value="." onclick="display.value += '.' ">
+                    <input type="button" class="button" value="0" onclick="display.value += '0' ">
+                    <input type="button" class="button" id="operator" value="/" onclick="display.value += '/' ">
+                    <input type="button" class="button" id="operator" value="x" onclick="display.value += '*' ">
+                </div>
+
+                <div class="container">
+                    <input type="button" class="reset-button" value="RESET" onclick="clearAll()">
+                    <input type="button" class="equals-button" value="=" onclick="display.value = eval(display.value) ">
+                </div>
+                
+            </div>
+
+        </form>
+
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
